@@ -1,0 +1,18 @@
+.panel-stack {
+  display: flex;
+  flex-basis: $grids-width;
+
+  &.panel-stack--horizontal {
+    flex-direction: column;
+  }
+
+  &.panel-stack--center {
+    align-items: center;
+  }
+}
+
+@include media($response-breakpoint != none) {
+  .panel-stack {
+    //flex-direction: column;
+  }
+}

@@ -1,0 +1,28 @@
+
+
+@mixin button-animation($bg-color-after: none, $bg-color-before: none, $border: none) {
+  @if ($bg-color-after != none or $border != null) {
+    &:after {
+      @if($bg-color-after != none) {
+        background: $bg-color-after;
+      }
+      @if($border != null) {
+        border: $border;
+      }
+    }
+  }
+  @if ($bg-color-before != none or $border != null) {
+    &:before {
+      @if($bg-color-before != none) {
+        background: $bg-color-before;
+      }
+      @if($border != null) {
+        border: $border;
+      }
+    }
+  }
+}
+
+
+
+

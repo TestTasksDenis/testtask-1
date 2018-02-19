@@ -1,0 +1,12 @@
+@mixin embedded-fonts-constructor($fontName){
+  @font-face {
+    font-family: $fontName;
+    src: url('#{$fonts-folder}/#{$fontName}/#{$fontName}.eot');
+    src: url('#{$fonts-folder}/#{$fontName}/#{$fontName}.eot?#iefix') format('embedded-opentype'),
+    url('#{$fonts-folder}/#{$fontName}/#{$fontName}.woff2') format('woff2'),
+    url('#{$fonts-folder}/#{$fontName}/#{$fontName}.woff') format('woff'),
+    url('#{$fonts-folder}/#{$fontName}/#{$fontName}.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}

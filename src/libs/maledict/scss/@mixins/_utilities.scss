@@ -1,0 +1,79 @@
+@mixin absolute-content ($symbol: "") {
+  content: $symbol;
+  display: block;
+  position: absolute;
+}
+
+@mixin visibility ($visibility: "none") {
+  @if ($visibility == "visible"){
+    opacity: 1;
+    visibility: visible;
+  }
+  @else{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@mixin setSize($width, $height, $unit: px) {
+  width: $width + $unit;
+  height: $height + $unit;
+  line-height: $height + $unit;
+}
+
+// Offsets
+@mixin margin($direction, $value) {
+  @if($direction == left) {
+    .ml-#{$value} {
+      margin-#{$direction}: $value + px;
+    }
+  }
+  @else if($direction == right) {
+    .mr-#{$value} {
+      margin-#{$direction}: $value + px;
+    }
+  }
+  @else if($direction == top) {
+    .mt-#{$value} {
+      margin-#{$direction}: $value + px;
+    }
+  }
+  @else if($direction == bottom) {
+    .mb-#{$value} {
+      margin-#{$direction}: $value + px;
+    }
+  }
+}
+
+@mixin margin($direction, $value) {
+  $marker: false !default;
+
+  @if($direction == padding-left){
+    $marker: pl
+  }
+  @else if($direction == padding-right){
+    $marker: pr
+  }
+  @else if($direction == padding-top){
+    $marker: pt
+  }
+  @else if($direction == padding-bottom){
+    $marker: pb
+  }
+  @if($direction == margin-left){
+    $marker: ml
+  }
+  @else if($direction == margin-right){
+    $marker: mr
+  }
+  @else if($direction == margin-top){
+    $marker: mt
+  }
+  @else if($direction == margin-bottom){
+    $marker: mb
+  }
+
+  .#{$marker}-#{$value} {
+    #{$direction} : $value + px;
+  }
+}

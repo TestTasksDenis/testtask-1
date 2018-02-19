@@ -1,0 +1,55 @@
+/* Containers
+   ========================================================================== */
+
+// Generation
+
+
+// Helper
+@mixin containerHelper($size) {
+  margin-left: auto;
+  margin-right: auto;
+  width: $size;
+}
+
+/* Background
+   ========================================================================== */
+
+// Circle
+@mixin circle($width, $color, $bg-color: none, $radius: 50%){
+  background-color: $color;
+  width: $width;
+  line-height: $width;
+  border-radius: $radius;
+  text-align: center;
+
+  @if($bg-color != none) {
+    background-color: $bg-color;
+  }
+}
+
+/* Text
+   ========================================================================== */
+// Text color
+@mixin text-color($selector, $color) {
+  #{$selector} {
+    color: $color;
+  }
+}
+
+// Buttons
+@mixin button($mark, $height, $width) {
+  .btn--#{$mark} {
+    @if ($width != auto) {
+      width: $width;
+    }
+    height: $height;
+    line-height: $height;
+  }
+}
+
+// Alignment
+@mixin alignment($align-items: center, $justify-content: flex-start) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}

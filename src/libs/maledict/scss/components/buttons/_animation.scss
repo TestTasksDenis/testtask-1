@@ -1,0 +1,281 @@
+// Victoria
+.btn-animate--victoria-1 {
+  transition: all 0.75s ease;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(150%, 0, 50%, 50%);
+    transition: all 0.75s ease 0s;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  }
+
+  &:hover:after {
+    height: 450%;
+    opacity: 1;
+  }
+}
+
+.btn-animate--victoria-2 {
+  transition: all 0.75s ease;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(150%, 0, 50%, 50%);
+    transition: all 0.75s ease 0s;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(25deg);
+  }
+
+  &:hover:after {
+    opacity: 1;
+    height: 450%;
+  }
+}
+
+.btn-animate--victoria-3 {
+  transition: all 0.5s ease;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(150%, 0, 50%, 50%);
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &:hover:after {
+    opacity: 1;
+    height: 140%;
+  }
+}
+
+.btn-animate--victoria-4 {
+  transition: all 0.75s ease;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(150%, 0, 50%, 50%);
+    opacity: 0;
+    transition: all 0.75s ease 0s;
+    transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  }
+
+  &:hover:after {
+    opacity: 1;
+    height: 600%;
+  }
+}
+
+// Sandy
+// !!!
+
+// Gibson
+.btn--animate-gibson-1 {
+  transition: all 1s ease;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(150%, 0, 50%, 50%);
+    opacity: 0;
+    transition: all 0.75s ease 0s;
+    background-size: 10px 10px !important;
+    transform: translateX(-50%) translateY(-50%) rotate(25deg);
+  }
+
+  &:hover:after {
+    opacity: 1;
+    height: 600%;
+  }
+}
+
+.btn--animate-gibson-2 {
+  transition: all 1s ease;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(150%, 0, 50%, 50%);
+    opacity: 0;
+    background-size: 10px 10px !important;
+    transition: all 0.75s ease 0s;
+    transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  }
+
+  &:hover:after {
+    opacity: 1;
+    height: 600%;
+  }
+}
+
+.btn--animate-gibson-3 {
+  transition: all 1s ease;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(150%, 0, 50%, 50%);
+    opacity: 0;
+    background-size: 10px 10px !important;
+    transition: all 0.75s ease 0s;
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  }
+
+  &:hover:after {
+    opacity: 1;
+    height: 600%;
+  }
+}
+
+.btn--animate-gibson-4 {
+  transition: all 1s ease;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(150%, 0, 50%, 50%);
+    opacity: 0;
+    background-size: 10px 10px !important;
+    transition: all 0.75s ease 0s;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &:hover:after {
+    opacity: 1;
+    height: 600%;
+  }
+}
+
+// Thar
+.btn--animate-thar-1 {
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(100%, 0, 0, 0);
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+
+  &:hover:after {
+    @include button-animation-props(none, 100%, auto, none, none, 0);
+  }
+}
+
+.btn--animate-thar-2 {
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(100%, 0, none, 0, none, 0);
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+
+  &:hover:after {
+    @include button-animation-props(none, 100%, 0, none, none, auto);
+  }
+}
+
+.btn--animate-thar-3 {
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(0, 100%, 0, none, 0);
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+
+  &:hover:after {
+    @include button-animation-props(100%, none, none, 0, auto);
+  }
+}
+
+.btn--animate-thar-4 {
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(0, 100%, 0, 0);
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  }
+
+  &:hover:after {
+    @include button-animation-props(100%, none, none, auto, 0);
+  }
+}
+
+// Fade
+.btn--animate-fade {
+  transition: all 0.7s ease;
+}
+
+// Winona
+.btn--animate-winona {
+  transition: border-color 0.3s, background 0.3s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+  & > span {
+    display: block;
+  }
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(100%, 100%, 0, 0);
+    content: attr(data-text);
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(0, 25%, 0);
+  }
+
+  &:after,
+  & > span{
+    padding: 1em 2em;
+    transition: transform 0.3s, opacity 0.3s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  &:hover:after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &:hover > span {
+    opacity: 0;
+    transform: translate3d(0, -25%, 0);
+  }
+}
+
+.btn--animate-wayra-1 {
+  transition: all 0.3s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(150%, 100%, 0, 0);
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    transform-origin: 0 100%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 0deg);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+  }
+}
+
+.btn--animate-wayra-2 {
+  transition-property: color;
+  transition-duration: .4s;
+
+  &:after {
+    @include button-animation-pseudo();
+    @include button-animation-props(100%, 0, -90px, -35px);
+    transition-property: height;
+    transition-duration: .4s;
+    transform: rotate(-27deg);
+  }
+
+  &:hover {
+    &:after {
+      height: 200px;
+    }
+  }
+}

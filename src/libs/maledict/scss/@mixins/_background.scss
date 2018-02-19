@@ -1,0 +1,20 @@
+@mixin background($bg-color, $bg-color-hover: none) {
+
+  @if($bg-color != none) {
+    background: $bg-color;
+  }
+
+  &:hover {
+    @if($bg-color-hover != none) {
+      background: $bg-color-hover;
+    }
+  }
+}
+
+@mixin linear-gradient($direction, $gradients...) {
+  background: linear-gradient($direction, $gradients...);
+}
+
+@mixin radial-gradient($direction, $gradients...) {
+  background: radial-gradient($direction, $gradients...);
+}

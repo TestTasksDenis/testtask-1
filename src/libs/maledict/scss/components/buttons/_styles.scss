@@ -1,0 +1,36 @@
+.btn {
+  white-space: nowrap;
+  touch-action: manipulation;
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+
+  &.btn--rounded {
+    border-radius: 20em;
+  }
+
+  &.btn--upper {
+    text-transform: uppercase;
+  }
+
+  span {
+    z-index: 2;
+    position: relative;
+  }
+}
+
+// Styles
+.btn--style-1 {
+  padding: 6px 15px 7px;
+  font: {
+    family: "SegoeUI__Semibold", sans-serif;
+    size: 12px;
+  };
+  @include rounded();
+
+  @include btn-style-1(linear-gradient(to bottom,#007bc6,#0071b8), #fff, 1px solid #1e5c90);
+  @include btn-hover-animation(#0c97ed, #fff);
+}

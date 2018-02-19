@@ -1,0 +1,6 @@
+// Constructor
+@mixin container($size) {
+  margin-left: auto;
+  margin-right: auto;
+  width: $size;
+}

@@ -1,0 +1,12 @@
+//
+@each $selector, $bg-color, $text-color, $bg-color-hover, $text-color-hover in $element-styles {
+  @include style-constructor($selector, $bg-color, $text-color, $bg-color-hover, $text-color-hover);
+}
+
+@each $selector, $border, $border-hover in $element-borders {
+  @include border-constructor($selector, $border, $border-hover);
+}
+
+@each $selector, $type in $element-edges {
+  @include edge-constructor($selector, $type);
+}

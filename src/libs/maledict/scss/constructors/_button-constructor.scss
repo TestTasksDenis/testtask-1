@@ -1,0 +1,11 @@
+@mixin button-size-constructor($selector, $height: inherit, $padding: 0, $width: auto) {
+  .#{$selector} {
+    @include button-size($height, $padding, $width);
+  }
+}
+
+@mixin button-animate-constructor($selector, $bg-color-after, $bg-color-before, $border) {
+  .#{$selector} {
+    @include button-animation($bg-color-after, $bg-color-before, $border);
+  }
+}

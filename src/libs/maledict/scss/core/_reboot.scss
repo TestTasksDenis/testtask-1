@@ -1,0 +1,68 @@
+/* Embedded fonts
+   ========================================================================== */
+@each $font in $embedded-fonts {
+  @include embedded-fonts-constructor($font);
+}
+
+/* Common styles
+   ========================================================================== */
+body {
+  background-color: $body-bg;
+  font: {
+    family: $font-family-default, $font-family-sans-serif;
+    size: $font-size-default;
+  };
+  color: $body-color;
+}
+
+b, strong {
+  font-family: $font-weight-bold, sans-serif;
+}
+
+address, cite, dfn, em, i {
+  font-family: $font-style-italic, sans-serif;
+}
+
+pre, code, kbd, samp {
+  font-family: $font-family-monospace;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+
+
+
+
+
+
+///* Colour Scheme
+//   ========================================================================== */
+//@each $name, $color in $colorScheme{
+//  @include text-color(".text-color--#{$name}", $color);
+//}
+//
+///* Background
+//   ========================================================================== */
+//
+//// Background gradients
+//// !!! Сделать градиенты !!!
+//
+///* Buttons
+//   ========================================================================== */
+//@each $mark, $height, $width in $buttonsSize{
+//  @include button($mark, $height, $width);
+//}
+//
+///* Offsets
+//   ========================================================================== */
+//@each $direction, $value in $offsets {
+//  @include margin($direction, $value);
+//}

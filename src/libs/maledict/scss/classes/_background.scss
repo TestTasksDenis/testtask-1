@@ -1,0 +1,10 @@
+// Transparent
+.bg--t {
+  background: transparent;
+}
+
+// Color array
+@each $mark, $color in $bg-colors{
+  @include bg-color-constructor(".bg--#{$mark}", $color);
+}
+

@@ -1,0 +1,5 @@
+@mixin bg-color-constructor($selector, $color) {
+  #{$selector} {
+    background-color: $color;
+  }
+}

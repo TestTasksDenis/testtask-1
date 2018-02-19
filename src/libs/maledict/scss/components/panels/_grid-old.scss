@@ -1,0 +1,103 @@
+// Stack Panel
+.stack-panel {
+  display: flex;
+  flex-basis: $grids-width;
+
+  &.stack-panel--horizontal {
+    flex-direction: column;
+  }
+}
+
+// Dock Panel
+.dock-panel {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: $grids-width;
+
+  .col--top {
+    flex-basis: 100%;
+    order: 0;
+  }
+
+  .col--bottom {
+    flex-basis: 100%;
+    order: 20;
+  }
+
+  .dock-panel__content {
+    display: flex;
+    order: 1;
+    flex-basis: 100%;
+
+    .col--left {
+      order: 0;
+      flex-shrink: 0;
+    }
+
+    .col--content {
+      flex-basis: 100%;
+      order: 1;
+    }
+
+    .col--right {
+      order: 2;
+      flex-shrink: 0;
+    }
+  }
+}
+
+@include media($response-breakpoint){
+  .dock-panel {
+    flex-basis: 100%;
+
+    .dock-panel__content{
+      flex-direction: column;
+    }
+  }
+}
+
+// Wrap Panel
+.wrap-panel{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: $grids-width;
+
+  &.wrap-panel--vertical{
+    flex-direction: column;
+  }
+}
+
+@include media($response-breakpoint){
+  .wrap-panel {
+    flex-basis: 100%;
+  }
+}
+
+// Canvas
+.grid-canvas{
+  flex-basis: $grids-width;
+  position: relative;
+
+  & > *{
+    position: absolute;
+  }
+}
+
+@include media($response-breakpoint){
+  .grid-canvas {
+    flex-basis: 100%;
+  }
+}
+
+// Отступ между столбцами при адаптации
+@if($defaultOffsets == true) {
+  @include media($response-breakpoint){
+    [class^="col--"] {
+      margin-bottom: $responseMargin;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

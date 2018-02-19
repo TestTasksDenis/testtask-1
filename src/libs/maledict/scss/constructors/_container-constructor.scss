@@ -1,0 +1,35 @@
+@mixin container-constructor ($size, $mark){
+  @if($mark == main) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      width: $size;
+    }
+
+    @if($response-breakpoint != none) {
+      @include media($response-breakpoint) {
+        .container{
+          padding-left: $container-response-padding;
+          padding-right: $container-response-padding;
+          width: 100%;
+        }
+      }
+    }
+  }
+  @else {
+    .container--#{$mark}{
+      margin-left: auto;
+      margin-right: auto;
+      width: $size;
+    }
+
+    @if($response-breakpoint != none) {
+      @include media($size){
+        .container--#{$mark}{
+          padding: 0 $container-response-padding;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

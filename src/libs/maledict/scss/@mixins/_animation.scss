@@ -1,0 +1,21 @@
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin transition($property: all, $duration: 0.5s, $timing_function: ease, $delay: 0s) {
+  transition: $property $duration $timing_function $delay;
+}
+
+@mixin animation($name, $duration: 0, $delay: 0, $iteration_count: 1, $direction: normal, $fill_mode: none, $play_state: running) {
+  animation: $name $duration+s $delay+s $iteration_count $direction $fill_mode $play_state;
+}

@@ -1,0 +1,11 @@
+nav {
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  &.nav--vertical {
+    ul {
+      flex-direction: column;
+    }
+  }
+}

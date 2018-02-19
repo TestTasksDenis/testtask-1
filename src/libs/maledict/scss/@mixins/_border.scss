@@ -1,0 +1,9 @@
+@mixin border($border, $border-hover: none) {
+  border: $border;
+
+  @if($border-hover != null) {
+    &:hover {
+      border: $border-hover;
+    }
+  }
+}

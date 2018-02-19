@@ -1,0 +1,5 @@
+@mixin round($type: false) {
+  @if($type == true) {
+    border-radius: 20em;
+  }
+}

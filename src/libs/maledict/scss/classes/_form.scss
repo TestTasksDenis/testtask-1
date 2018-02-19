@@ -1,0 +1,53 @@
+.form-control {
+
+  // Common
+  &.form-control--radio,
+  &.form-control--checkbox {
+    label {
+      display: inline-flex;
+      cursor: pointer;
+      user-select: none;
+
+      .icon {
+        width: 14px;
+        height: 14px;
+        display: block;
+      }
+
+      input[type='radio'],
+      input[type='checkbox'] {
+        display: none;
+      }
+    }
+  }
+
+  // Radio
+  &.form-control--radio {
+    label {
+      input[type='radio'] {
+        &:checked ~ .icon{
+          background: url("./icons/radio-active.svg") no-repeat;
+        }
+      }
+
+      .icon {
+        background: url("./icons/radio.svg") no-repeat;
+      }
+    }
+  }
+
+  // Checkbox
+  &.form-control--checkbox {
+    label {
+      input[type='checkbox'] {
+        &:checked ~ .icon{
+          background: url("./icons/checkbox-active.svg") no-repeat;
+        }
+      }
+
+      .icon {
+        background: url("./icons/checkbox.svg") no-repeat;
+      }
+    }
+  }
+}

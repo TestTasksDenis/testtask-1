@@ -1,0 +1,18 @@
+@mixin style-constructor($selector, $bg-color, $text-color, $bg-color-hover, $text-color-hover) {
+  .#{$selector} {
+    @include background($bg-color, $bg-color-hover);
+    @include color($text-color, $text-color-hover)
+  }
+}
+
+@mixin border-constructor($selector, $border, $border-hover) {
+  .#{$selector} {
+    @include border($border, $border-hover);
+  }
+}
+
+@mixin edge-constructor($selector, $type) {
+  .#{$selector} {
+    @include round($type);
+  }
+}

@@ -1,0 +1,9 @@
+@mixin color($text-color: none, $text-color-hover: none) {
+  color: $text-color;
+
+  &:hover {
+    @if($text-color-hover != none) {
+      color: $text-color-hover;
+    }
+  }
+}
