@@ -1,6 +1,8 @@
 .page-services {
   .service-list {
     position: relative;
+    overflow: hidden;
+    padding-top: 22px;
 
     &:before {
       @include absolute-content();

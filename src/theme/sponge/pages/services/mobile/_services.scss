@@ -1,0 +1,41 @@
+@include media(1440px){
+
+}
+
+@include media(1280px){
+  .page-services .service-list ul li {
+    flex-basis: 33%;
+  }
+}
+
+@include media(768px){
+  .page-services .service-list ul li {
+    flex-basis: 50%;
+  }
+
+  .page-services .service-list:before {
+    bottom: 0;
+  }
+
+  .page-services .offers-list ul {
+    justify-content: center;
+  }
+
+  .page-services .offers-list ul li {
+    flex-basis: 83%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+@include media(768px){
+  .page-services .service-list ul li {
+    margin-bottom: 60px;
+  }
+
+  .page-services .offers-list h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+}

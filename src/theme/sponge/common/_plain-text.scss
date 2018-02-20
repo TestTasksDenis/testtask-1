@@ -20,7 +20,7 @@ h1 {
     size: 20px;
   };
   width: 930px;
-  margin: 0 auto 122px;
+  margin: 0 auto 100px;
   line-height: 36px;
 }
 
@@ -34,5 +34,38 @@ h2.title {
   &:after {
     content: '.';
     color: #20aa97;
+  }
+}
+
+@include media(1024px){
+  .page-desc {
+    width: 100%;
+  }
+}
+
+@include media(768px){
+  .page-desc {
+    width: 70%;
+  }
+}
+
+@include media(425px){
+  h1 {
+    text-align: left;
+    font-size: 80px;
+    padding: 0 25px;
+    margin-bottom: 20px;
+  }
+
+  .page-desc {
+    width: 100%;
+    text-align: left;
+    padding: 25px;
+    font: {
+      family: $font1-Semibold, sans-serif;
+      size: 16px;
+    };
+    line-height: 32px;
+    margin-bottom: 10px;
   }
 }
