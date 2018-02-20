@@ -12,7 +12,7 @@ const babel           = require('gulp-babel');
 const ThemeName = "sponge";
 const PathToTheme = `./src/theme/${ThemeName}`;
 const PathToCss = `./public/css`;
-const PathToJs = `./themes/${ThemeName}/js`;
+const PathToJs = `./public/js`;
 
 // Common Bundle
 gulp.task('sass-common', function () {
@@ -29,26 +29,26 @@ gulp.task('sass-common', function () {
         .pipe(debug({title: 'Generated CSS File:'}));
 });
 
-// gulp.task('compile-js', function() {
-//     return gulp.src(PathToTheme + '/**/*.js')
-//         .pipe(debug({title: 'Changed JavaScript File:'}))
-//         .pipe(babel({
-//             presets: ['es2015']
-//         }))
-//         .pipe(concat('common.js'))
-//         .pipe(uglify())
-//         .pipe(rename({
-//             //prefix: "prefix-",
-//             //dirname: "subfolder/subfolder",
-//             //extname: ".md"
-//             suffix: ".min",
-//             basename: "common"
-//         }))
-//         .pipe(gulp.dest(PathToJs));
-// });
+gulp.task('js-common', function() {
+    return gulp.src(PathToTheme + '/**/*.js')
+        .pipe(debug({title: 'Changed JavaScript File:'}))
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(concat('common.js'))
+        .pipe(uglify())
+        .pipe(rename({
+            //prefix: "prefix-",
+            //dirname: "subfolder/subfolder",
+            //extname: ".md"
+            suffix: ".min",
+            basename: "common"
+        }))
+        .pipe(gulp.dest(PathToJs));
+});
 
 // Watchers
 gulp.task('default', function (){
     gulp.watch(PathToTheme + '/**/*.scss', ['sass-common']);
-    // gulp.watch(PathToTheme + '/**/*.js', ['compile-js']);
+    gulp.watch(PathToTheme + '/**/*.js', ['js-common']);
 });
