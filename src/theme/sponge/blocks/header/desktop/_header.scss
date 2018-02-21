@@ -67,5 +67,22 @@
         }
       }
     }
+
+    // Response Nav
+    .response-nav {
+      display: none;
+      width: 18px;
+      height: 12px;
+      background: url("../libs/response-nav/img/button.svg") no-repeat center;
+      text-indent: -99999999px;
+      padding: 15px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      transition: all 0.5s ease;
+
+      &:hover {
+        border: 1px solid #1e0e00;
+      }
+    }
   }
 }

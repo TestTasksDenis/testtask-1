@@ -5,6 +5,8 @@
     <title>Sponge Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/common.min.css" />
+    <link rel="stylesheet" type="text/css" href="libs/response-nav/css/response-nav.css" />
+    <script src="./libs/response-nav/js/modernizr.custom.js"></script>
 </head>
 <body>
 <div class="loader"></div>
@@ -27,6 +29,7 @@
                     <li><a href="#">Contacts</a></li>
                 </ul>
             </nav>
+            <button id="trigger-overlay" type="button" class="response-nav">Response Nav</button>
         </div>
     </header>
     <main class="layout__body page-services">
@@ -259,6 +262,24 @@
         </div>
     </footer>
 </div>
+
+<div class="overlay overlay-scale">
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+        <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Out projects</a></li>
+            <li><a href="#">Process</a></li>
+            <li><a href="#">Faq</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    </nav>
+</div>
+
 <script src="./js/common.min.js"></script>
+<script src="./libs/response-nav/js/classie.js"></script>
+<script src="./libs/response-nav/js/response-nav.js"></script>
 </body>
 </html>

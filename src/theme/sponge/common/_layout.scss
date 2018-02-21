@@ -1,9 +1,7 @@
 .layout {
-  background: url("#{$img-folder}/header/circle.png") no-repeat top right;
-}
-
-.animate-block {
-  opacity: 0;
+  background:
+          url("#{$img-folder}/header/circle.png") no-repeat top right,
+          url("#{$img-folder}/bg-lines.png") repeat center;
 }
 
 @-webkit-keyframes zoomInDown {

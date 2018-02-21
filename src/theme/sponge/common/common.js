@@ -1,16 +1,22 @@
 window.onload = function () {
-  setTimeout(() => {
-      document.querySelector('.loader').style.display = 'none';
-  }, 1000);
+    function animateContent() {
+        let viewport = parseInt(screen.availHeight / 3);
+        let animateElements = document.querySelectorAll('.animate-block');
+
+        animateElements.forEach(function (elem) {
+            console.log(viewport, elem.getBoundingClientRect().top);
+            if(elem.getBoundingClientRect().top >= viewport) {
+                elem.classList.add('zoomInDown');
+            }
+        });
+    }
+
+    setTimeout(() => {
+        document.querySelector('.loader').style.display = 'none';
+    }, 800);
+
+    window.onscroll = function() {
+        animateContent();
+    };
 };
 
-window.onscroll = function() {
-  let viewport = (window.pageYOffset || document.documentElement.scrollTop) / 2;
-  let animateElements = document.querySelectorAll('.animate-block');
-
-  animateElements.forEach(function (elem) {
-      if(elem.getBoundingClientRect().top + 800 >= viewport) {
-        elem.classList.add('zoomInDown');
-      }
-  });
-};
